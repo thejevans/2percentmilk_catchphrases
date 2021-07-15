@@ -90,14 +90,14 @@ void loop() {
       wipeLeds();
     }
   }
-  
+
   if (key1Down) {
     writeString();
     pulseLed(LED_1);
     delay(50);
     key1Down = false;
   }
-  
+
   if (key2Down) {
     writeString();
     pulseLed(LED_2);
@@ -114,6 +114,7 @@ void writeString() {
     buff[i] = '\0';
     delay(5);
   }
+  Keyboard.write(' ');
 }
 
 void pulseLed(int ledNum) {
